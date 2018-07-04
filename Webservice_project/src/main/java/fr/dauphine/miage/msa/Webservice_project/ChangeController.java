@@ -54,11 +54,12 @@ public class ChangeController {
     }
 
     @GetMapping("/devise-change/delete/{id}")
-    public void deleteTauxChange
+    public String deleteTauxChange
             (@PathVariable Long id) {
 
              repository.deleteById(id);
-
+        String result="row successfully deleted";
+        return result;
         }
 
     @GetMapping("/devise-change/modif/{source}/{dest}/{date}/{newtaux}")

@@ -80,7 +80,8 @@ RestTemplate restTemplate = new RestTemplate();
 
     }
 
-    @GetMapping("/operation-change/simulation/{source}/{dest}/{montant}")
+    @GetMapping("" +
+            "/{source}/{dest}/{montant}")
     public double SimulOperationChange
             (@PathVariable String source, @PathVariable String dest, @PathVariable double montant)
     {
